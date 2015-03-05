@@ -11,7 +11,7 @@
 #include <util/delay.h>
 #include <stdbool.h>
 
-#define MAX_SPEED 37500 //125000; // distance[dm] * cpu_frequency[Hz] / timer1_prescaler = (here) 1dm * 8000000 / 64
+#define MAX_SPEED 143500 // distance[dm] * cpu_frequency[Hz] / timer1_prescaler = (here) 1dm * 8000000 / 64
 #define MAX_OVERFLOWS (MAX_SPEED/65536+1) //maximum count of overflows for calculation
 #define PLEXDELAY 32 //~244Hz = 8MHz/1024/plexdelay
 
