@@ -110,7 +110,7 @@ ISR(TIMER2_COMP_vect) {
     currentSegment = 0;
   else
     currentSegment++;
-  TCNT2 = 0; //not needed due to CTC (clear timer on compare) mode
+  //TCNT2 = 0; //not needed due to CTC (clear timer on compare) mode
 }
 
 //calculate the speed using captured values (and overflow count)
@@ -142,7 +142,7 @@ int main() {
 
   //Timer2 for 7-segment multiplexing
   OCR2 = PLEXDELAY; //set compare match value
-  TCCR2 = 0b01000111; //set CTC mode, prescaler 1024
+  TCCR2 = 0b00001111; //set CTC mode, prescaler 1024
 
   //Timer1 for speed measurement
   TCCR1B = 0b11000011; //input capture noise canceler + capture on rising edge, prescaler 64
